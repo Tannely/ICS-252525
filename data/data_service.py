@@ -39,7 +39,7 @@ def show_dovidnyk(dovidnyk):
     for tovar in dovidnyk:
 
         if tovar_code_from < tovar[0] < tovar_code_to:
-            print("код: {:5} найменування: {:25} скидка:{:10}".format(tovar[0], tovar[1], tovar[2]))
+            print("код: {:5} найменування: {:25} скидка:{:3}".format(tovar[0], tovar[1], tovar[2]))
 
 
 dovidnyk = get_dovidnyk()
