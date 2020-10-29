@@ -73,7 +73,7 @@ def get_tovaroobih():
         "5000;         3500;             3590;     2015",
     ]
 
-    # накопичувач унывермагу
+    # накопичувач універмагу
     tovaroobih_list =[]
 
     for line in from_file:
