@@ -95,11 +95,7 @@ def show_tovaroobih(tovaroobih):
     for univermag in tovaroobih:
 
         if univermag_code_from < univermag[0] < univermag_code_to:
-           print(univermag)
-
-
-
-
+           print("код: {:6} план: {:6} виконання: {:6} рік: {:6}".format(univermag[0], univermag[1], univermag[2], univermag[3]))
 
 
 tovaroobih = get_tovaroobih()
