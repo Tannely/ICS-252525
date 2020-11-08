@@ -3,18 +3,16 @@
 """
 
 def get_dovidnyk():
-    """повертає довідник товарних груп який отримує ззовні
+    """повертає довідник товарних груп який отримує  з файлу 'dovidnyk.txt'
 
     Returns:
         dovidnyk_list: довідник товарних груп
     """
-    from_file = [
-        "1000;Тканини;4",
-        "2000;Одяг та білизна;7,5",
-        "3000;Взуття;7,5",
-        "4000;Трикотаж;7,5",
-        "5000;Галантерея;9,5",
-    ]
+    
+    with open("./data/dovidnyk.txt") as dovidnyk_file:
+        from_file = dovidnyk_file.readlines()
+
+    
     # накопичувач товарів
     dovidnyk_list = []
 
@@ -36,12 +34,17 @@ def show_dovidnyk(dovidnyk):
     tovar_code_from = input("З якого коду? ")
     tovar_code_to   = input("По який коду? ")
 
+    kol_lines = 0
+
+
     for tovar in dovidnyk:
 
         if tovar_code_from < tovar[0] < tovar_code_to:
             print("код: {:5} найменування: {:25} скидка:{:5}".format(tovar[0], tovar[1], tovar[2]))
             kol_lines += 1
-
+  
+    if kol_lines == 0:
+        print("Код не знайдений")
     
 
 dovidnyk = get_dovidnyk()
@@ -52,28 +55,15 @@ show_dovidnyk(dovidnyk)
 
 
 def get_tovaroobih():
-    """повертає товарообіг універмагу який отримує ззовні
+    """повертає товарообіг універмагу який отримує з файлу 'tovaroobih.txt'
 
     Returns:
         tovaroobih_list: товарообіг універмагу
     """
-    from_file = [
-        "1000;4340;4420;2013",
-        "2000;6280;6720;2013",
-        "3000;5260;5854;2013",   
-        "4000;3720;3682;2013",
-        "5000;2410;2694;2013",
-        "1000;4600;4640;2014",
-        "2000;6800;7400;2014",
-        "3000;6000;6250;2014",
-        "4000;3800;3850;2014",
-        "5000;2700;3000;2014",
-        "1000;4700;4625;2015",
-        "2000;6700;6630;2015",
-        "3000;6700;6500;2015",
-        "4000;4300;4500;2015",
-        "5000;3500;3590;2015",
-    ]
+    
+    with open("./data/tovaroobih.txt") as tovaroobih_file:
+        from_file = tovaroobih_file.readlines()
+
 
     # накопичувач універмагу
     tovaroobih_list =[]
@@ -94,10 +84,17 @@ def show_tovaroobih(tovaroobih):
     univermag_code_from = input("З якого коду? ")
     univermag_code_to   = input("По який коду? ")
 
+    kol_lines = 0
+
+
     for univermag in tovaroobih:
 
         if univermag_code_from < univermag[0] < univermag_code_to:
            print("код: {:6} план: {:6} виконання: {:6} рік: {:6}".format(univermag[0], univermag[1], univermag[2], univermag[3]))
+           kol_lines += 1
+
+    if kol_lines == 0:
+        print("Код не знайдений")
 
 
 tovaroobih = get_tovaroobih()
