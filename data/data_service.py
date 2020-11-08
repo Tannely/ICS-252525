@@ -83,7 +83,7 @@ def show_tovaroobih(tovaroobih):
     """
     univermag_code_from = input("З якого коду? ")
     univermag_code_to   = input("По який коду? ")
-
+   
     kol_lines = 0
 
 
@@ -94,9 +94,9 @@ def show_tovaroobih(tovaroobih):
            kol_lines += 1
 
     if kol_lines == 0:
-        print("Код не знайдений")
+        print("Код не знайдений")       
 
-
+  
 tovaroobih = get_tovaroobih()
 show_tovaroobih(tovaroobih)
 
