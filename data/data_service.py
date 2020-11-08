@@ -32,7 +32,7 @@ def show_dovidnyk(dovidnyk):
 
 
     tovar_code_from = input("З якого коду? ")
-    tovar_code_to   = input("По який коду? ")
+    tovar_code_to   = input("По який код? ")
 
     kol_lines = 0
 
@@ -84,7 +84,7 @@ def show_tovaroobih(tovaroobih):
 
     
     univermag_code_from = input("З якого коду? ")
-    univermag_code_to   = input("По який коду? ")
+    univermag_code_to   = input("По який код? ")
    
     kol_lines = 0
 
