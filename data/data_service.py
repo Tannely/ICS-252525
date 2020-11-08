@@ -72,7 +72,6 @@ def get_tovaroobih():
         line_list = line.split(';')
         tovaroobih_list.append(line_list)
    
-   
     return tovaroobih_list
  
 def show_tovaroobih(tovaroobih):
@@ -81,6 +80,9 @@ def show_tovaroobih(tovaroobih):
     Args:
         tovaroobih ([list]): товарообіг універмагу
     """
+
+
+    
     univermag_code_from = input("З якого коду? ")
     univermag_code_to   = input("По який коду? ")
    
