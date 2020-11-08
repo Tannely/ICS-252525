@@ -40,7 +40,9 @@ def show_dovidnyk(dovidnyk):
 
         if tovar_code_from < tovar[0] < tovar_code_to:
             print("код: {:5} найменування: {:25} скидка:{:5}".format(tovar[0], tovar[1], tovar[2]))
+            kol_lines += 1
 
+    
 
 dovidnyk = get_dovidnyk()
 show_dovidnyk(dovidnyk)
