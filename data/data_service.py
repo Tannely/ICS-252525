@@ -40,7 +40,7 @@ def show_dovidnyk(dovidnyk):
     for tovar in dovidnyk:
 
         if tovar_code_from < tovar[0] < tovar_code_to:
-            print("код: {:5} найменування: {:25} скидка:{:5}".format(tovar[0], tovar[1], tovar[2]))
+            print("код: {:5} найменування: {:15} скидка:{:5}".format(tovar[0], tovar[1], tovar[2]))
             kol_lines += 1
   
     if kol_lines == 0:
@@ -69,6 +69,10 @@ def get_tovaroobih():
     tovaroobih_list =[]
 
     for line in from_file:
+
+        # відрізати '\n' в кінці рядка
+        line = line[:-2]
+
         line_list = line.split(';')
         tovaroobih_list.append(line_list)
    
@@ -85,20 +89,21 @@ def show_tovaroobih(tovaroobih):
     
     univermag_code_from = input("З якого коду? ")
     univermag_code_to   = input("По який код? ")
-   
-    kol_lines = 0
 
+    kol_lines = 0
+   
 
     for univermag in tovaroobih:
 
         if univermag_code_from < univermag[0] < univermag_code_to:
            print("код: {:6} план: {:6} виконання: {:6} рік: {:6}".format(univermag[0], univermag[1], univermag[2], univermag[3]))
-           kol_lines += 1
-
+           kol_lines += 1 
     if kol_lines == 0:
-        print("Код не знайдений")       
+        print("Код не знайдений")     
 
+    
   
 tovaroobih = get_tovaroobih()
 show_tovaroobih(tovaroobih)
+
 
