@@ -17,6 +17,10 @@ def get_dovidnyk():
     dovidnyk_list = []
 
     for line in from_file:
+
+        # відрізати '\n' в кінці рядка
+        line = line[:-2]
+
         line_list = line.split(';')
         dovidnyk_list.append(line_list)
 
