@@ -17,6 +17,8 @@ def get_dovidnyk():
     dovidnyk_list = []
 
     for line in from_file:
+        #відрізати '\n' в кінці рядка
+        line = line[:-1]
         line_list = line.split(';')
         dovidnyk_list.append(line_list)
 
@@ -37,7 +39,7 @@ def show_dovidnyk(dovidnyk):
 
     for tovar in dovidnyk:
         if tovar_code_from <= tovar[0] <= tovar_code_to:
-            print("Код: {} Найменування: {:21} Знижка: {}".format(tovar[0], tovar[1], tovar[2]))
+            print("Код: {:5} Найменування: {:21} Знижка: {:5}".format(tovar[0], tovar[1], tovar[2]))
             
 
 
@@ -82,7 +84,7 @@ def show_tovaroobih(tovaroobih):
 
     for univermag in tovaroobih:
         if univermag_code_from <= univermag[0] <= univermag_code_to:
-            print("Код: {} План: {} Виконання: {} Рік: {}".format(univermag[0], univermag[1], univermag[2], univermag[3]))
+            print("Код: {:6} План: {:6} Виконання: {:6} Рік: {:6}".format(univermag[0], univermag[1], univermag[2], univermag[3]))
            
 
 tovaroobih = get_tovaroobih()
