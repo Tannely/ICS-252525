@@ -44,8 +44,8 @@ def show_dovidnyk(dovidnyk):
 
 
 
-dovidnyk = get_dovidnyk()
-show_dovidnyk(dovidnyk)
+# dovidnyk = get_dovidnyk()
+# show_dovidnyk(dovidnyk)
 
 
 
@@ -87,5 +87,5 @@ def show_tovaroobih(tovaroobih):
             print("Код: {:6} План: {:6} Виконання: {:6} Рік: {:6}".format(univermag[0], univermag[1], univermag[2], univermag[3]))
            
 
-tovaroobih = get_tovaroobih()
-show_tovaroobih(tovaroobih)    
+#tovaroobih = get_tovaroobih()
+#show_tovaroobih(tovaroobih)    

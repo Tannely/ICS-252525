@@ -1,5 +1,7 @@
 """формування валового доходу універмагу
 """
+from data_service import get_dovidnyk, get_tovaroobih
+
 
 # структура запису для вхідних даних
 dohid = {
@@ -11,3 +13,6 @@ dohid = {
     'plan_1' : 0.0,          # план валового доходу 
     'vykonannya_1' : 0.0     # очікуване виконання валового доходу
 }
+
+print(get_tovaroobih())
+print(get_dovidnyk())
