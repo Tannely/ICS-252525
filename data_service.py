@@ -44,8 +44,8 @@ def show_dovidnyk(dovidnyk):
 
 
 
-# dovidnyk = get_dovidnyk()
-# show_dovidnyk(dovidnyk)
+#dovidnyk = get_dovidnyk()
+#show_dovidnyk(dovidnyk)
 
 
 
