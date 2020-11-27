@@ -20,6 +20,7 @@ def get_dovidnyk():
         #відрізати '\n' в кінці рядка
         line = line[:-1]
         line_list = line.split(';')
+        line_list[2] = float(line_list[2])
         dovidnyk_list.append(line_list)
 
     return dovidnyk_list
@@ -66,6 +67,8 @@ def get_tovaroobih():
         #відрізати '\n' в кінці рядка
         line = line[:-1]
         line_list = line.split(';')
+        line_list[1] = int(line_list[1])
+        line_list[2] = int(line_list[2])
         tovaroobih_list.append(line_list)
 
     return tovaroobih_list

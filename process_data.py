@@ -31,7 +31,7 @@ def create_dohid():
         """
         for dovidnyk_1 in dovidnyk:
             if tovar_code == dovidnyk_1[0]:
-                return dovidnyk_1[1]
+                return (dovidnyk_1[1], dovidnyk_1[2])
 
 
      
@@ -51,10 +51,10 @@ def create_dohid():
         dohid_work['year']          = tovaroobih_1[3]
         dohid_work['plan']          = tovaroobih_1[1]
         dohid_work['vykonannya']    = tovaroobih_1[2]
+        dohid_work['name_of_tovar'] = get_tovar_name(tovaroobih_1[0])[0]
+        dohid_work['sale']          = get_tovar_name(tovaroobih_1[0])[1]
         dohid_work['plan_1']        = dohid_work['plan'] * dohid_work['sale']
         dohid_work['vykonannya_1']  = dohid_work['vykonannya'] * dohid_work['sale']
-        dohid_work['name_of_tovar'] = get_tovar_name(tovaroobih_1[0])
-
         dohid_list.append(dohid_work) 
 
     return dohid_list
@@ -64,7 +64,6 @@ def create_dohid():
 
 
 dohids = create_dohid()
-
 for item in dohids:
     print(item)
 
