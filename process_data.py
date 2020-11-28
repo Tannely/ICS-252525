@@ -1,5 +1,6 @@
 """формування валового доходу універмагу
 """
+
 from data_service import get_dovidnyk, get_tovaroobih
 
 # структура запису для вхідних даних
@@ -63,10 +64,9 @@ def create_dohid():
 
 
 
-dohids = create_dohid()
-for item in dohids:
-    print(item)
 
+def format_dohid(dohid):
+    return f'{dohid.get("name_of_tovar"):15} | {dohid.get("year"):5} | {dohid.get("plan"):4} |   {dohid.get("vykonannya")}    |   {dohid.get("sale"):3}  | {dohid.get("plan_1"):8} | {dohid.get("vykonannya_1"):8}'
 
 
 #print(get_tovaroobih())

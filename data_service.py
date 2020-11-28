@@ -3,7 +3,17 @@
 """
 
 
+    
+def write_to_file(array, path, dataType=None):
+    with open(path, 'w+', encoding='utf-8') as myFile:
+        for line in array:
+            if(dataType):
+                myFile.write(f"Код: {line[0]} План: {line[1]} Виконання: {line[2]} Рік: {line[3]}\n")
+            else:
+                myFile.write(f"Код: {line[0]} Найменування: {line[1]} Знижка: {line[2]}\n")
+
 def get_dovidnyk():
+    
     """повертає довідник товарних груп який отримує  з файлу 'dovidnyk.txt'
 
     Returns:
