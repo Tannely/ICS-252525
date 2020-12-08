@@ -179,3 +179,4 @@ StackEdit
 **Локально:** <div class="responsive-video"><iframe src="remark/assets/control_presentation.mp4" width="560" height="315" autoplay=false></iframe></div>
 
 *Для підключення відео, що зберігається в каталозі локально, необхідно вказати шлях до каталогу.*
+
